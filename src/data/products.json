@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "無重力プリン", "text": "お皿の上でふわりと浮かぶプリン", "price": 980, "image": "/img/pudding.jpg" },
+  { "id": 2, "name": "雲のわたあめ", "text": "空からちぎってきた、いちご味の雲", "price": 450, "image": "/img/wataame.jpg" },
+  { "id": 3, "name": "星くずクッキー", "text": "夜空で拾った星を焼き上げました", "price": 620, "image": "/img/cookie.jpg" },
+  { "id": 4, "name": "月見ラムネ", "text": "満月の夜にだけ泡が光るラムネ", "price": 300, "image": "/img/ramune.jpg" }
+]

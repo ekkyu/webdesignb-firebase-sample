@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 商品：だれでも読める。書き換えはコンソールからだけ
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // いいね：だれでも読める。count を1ずつ増やすことだけできる
+    match /likes/{productId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['count'])
+                    && request.resource.data.count == 1;
+      allow update: if request.resource.data.keys().hasOnly(['count'])
+                    && request.resource.data.count == resource.data.count + 1;
+    }
+
+    // お客さまの声：だれでも読める。140字までの新しい投稿だけできる（消す・直すは不可）
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['text', 'createdAt'])
+                    && request.resource.data.text is string
+                    && request.resource.data.text.size() > 0
+                    && request.resource.data.text.size() <= 140
+                    && request.resource.data.createdAt == request.time;
+    }
+  }
+}
