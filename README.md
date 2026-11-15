@@ -7,9 +7,8 @@ WebデザインB（第7回）の練習用アプリ「ふしぎ菓子店」です
 
 1. このページの右上の「☆ Star」を押す
 2. 緑の「Use this template」→「Open in a codespace」を押す（前回の codespace は使わず、新しく作る）
-3. 準備が終わると、自動で `npm install` と `npm start` が動き、プレビューが開く
-4. プレビューが出ないときは、下のパネルの「ポート」タブ → 3000 の地球儀アイコンで別のタブに開く
-5. GitHub に保存するときは、ソース管理でコミット →「ブランチを発行」→「Publish to GitHub private repository」
+3. 開いたら、下のターミナルで `npm install` → `npm start`。右下の「ブラウザーで開く」か、ポートタブの地球儀からアプリを開く
+4. GitHub に保存するときは、ソース管理でコミット →「ブランチを発行」→「Publish to GitHub private repository」
 
 使い終わったら github.com/codespaces で「…」→「Stop codespace」。
 
